@@ -37,9 +37,13 @@ body {
   --font-display: "Inter", sans-serif;
   --light-weight: 300;
   --title-large: 12vh;
+  --title-large-lh: 13vh;
+  --title-small: 40px;
+  --title-small-lh: 56px;
   --bodycopy: 24px;
+  --bodycopy-small: 14px;
   --bodycopy-lh: 32px;
-  --line-height-large: 13vh;
+  --bodycopy-small-lh: 24px;
   --gradient-top: linear-gradient(180deg, rgba(46, 68, 70, 0) 42.19%, #2E4446 100%);
   --gradient-bottom: linear-gradient(180deg, rgba(1, 28, 26, 0) 42.19%, #011C1A 100%);
 }
@@ -112,12 +116,11 @@ body {
 .content {
   font-family: var(--font-display);
   font-size: var(--title-large);
-  line-height: var(--line-height-large);
+  line-height: var(--title-larg-lh);
   font-weight: var(--light-weight);
   text-transform: uppercase;
   max-width: 80%;
   margin: 0 auto;
-  /* padding-top: 220px; */
   color: var(--color-white);
   text-align: center;
   position: relative;
@@ -216,13 +219,21 @@ img {
   z-index: 2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .card-image {
-    width: 50%;
+    width: 60%;
+    margin: 8px;
   }
 
   .content {
-    font-size: 8vh;
-    line-height: 10vh;
+    font-size: var(--title-small);
+    line-height: var(--title-small-lh)
+  }
+
+  .caption {
+    font-size: var(--bodycopy-small);
+    line-height: var(--bodycopy-small-lh);
+    left: 24px;
+    bottom: 30px;
   }
 }
