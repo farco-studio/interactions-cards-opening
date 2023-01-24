@@ -1,0 +1,228 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+/* variables */
+
+:root {
+  --color-white: #fff;
+  --color-black: #2E4446;
+  --color-orange: #F7B941;
+  --font-display: "Inter", sans-serif;
+  --light-weight: 300;
+  --title-large: 12vh;
+  --bodycopy: 24px;
+  --bodycopy-lh: 32px;
+  --line-height-large: 13vh;
+  --gradient-top: linear-gradient(180deg, rgba(46, 68, 70, 0) 42.19%, #2E4446 100%);
+  --gradient-bottom: linear-gradient(180deg, rgba(1, 28, 26, 0) 42.19%, #011C1A 100%);
+}
+
+/* component styles */
+
+body {
+  background-color: var(--color-black);
+}
+
+.footer {
+  padding: 120px 80px;
+  color: var(--color-white);
+  font-size: var(--bodycopy);
+  line-height: var(--bodycopy-lh);
+  font-family: var(--font-display);  
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer svg path {
+  fill: var(--color-white);
+}
+
+.message {
+  color: var(--color-white);
+  font-size: var(--bodycopy);
+  line-height: var(--bodycopy-lh);
+  font-family: var(--font-display);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.message span {
+  display: inline-block;
+  margin-top: 32px;
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.message svg path:nth-child(2) {
+  animation: scrollDown 1.5s ease-in-out infinite;
+}
+
+.content {
+  font-family: var(--font-display);
+  font-size: var(--title-large);
+  line-height: var(--line-height-large);
+  font-weight: var(--light-weight);
+  text-transform: uppercase;
+  max-width: 80%;
+  margin: 0 auto;
+  /* padding-top: 220px; */
+  color: var(--color-white);
+  text-align: center;
+  position: relative;
+  z-index: 2;  
+}
+
+.tag {
+  font-size: var(--bodycopy);
+  line-height: var(--bodycopy-lh);
+  margin-bottom: 48px;
+  padding: 8px 32px;
+  color: var(--color-black);
+  border-radius: 100px;
+  background-color: var(--color-orange);
+  display: inline-flex;
+  text-transform: capitalize;
+}
+
+.card-images-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 0 120px 0;
+  margin-top: -60px;
+  position: relative;
+  z-index: 1;
+}
+
+.card-image {
+  margin: 0 20px;
+  width: 25%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 8px;
+}
+
+.card-image::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--gradient-bottom);
+}
+
+.card-image::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80%;
+  background-image: var(--gradient-top);
+  transform: rotate(-180deg);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.caption {
+  position: absolute;
+  color: var(--color-white);
+  font-size: var(--bodycopy);
+  line-height: var(--bodycopy-lh);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  left: 40px;
+  bottom: 56px;
+}
+
+.card-image:nth-child(1) {
+  z-index: 2;
+}
+
+.card-image:nth-child(2) {
+  z-index: 3;
+}
+
+.card-image:nth-child(3) {
+  z-index: 4;
+}
+
+.card-image:nth-child(4) {
+  z-index: 3;
+}
+
+.card-image:nth-child(5) {
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .card-image {
+    width: 50%;
+  }
+
+  .content {
+    font-size: 8vh;
+    line-height: 10vh;
+  }
+}
