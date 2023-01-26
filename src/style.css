@@ -92,10 +92,6 @@ body {
   min-height: 70vh;
 }
 
-.message svg {
-  width: 32px;
-}
-
 .message span {
   display: inline-block;
   margin-top: 16px;
@@ -201,7 +197,7 @@ img {
   font-family: var(--font-display);
   text-transform: uppercase;
   left: 40px;
-  bottom: 56px;
+  bottom: 40px;
 }
 
 .card-image:nth-child(1) {
