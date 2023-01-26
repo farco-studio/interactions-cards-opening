@@ -54,6 +54,42 @@ body {
   background-color: var(--color-black);
 }
 
+.header {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-white);
+  position: relative;
+  font-family: var(--font-display);
+}
+
+.header a::after {
+  content: '';
+  display: inline-block;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  right: 100%;
+  background: var(--color-white);
+  position: absolute;
+  transition: right 0.3s ease-in-out;
+}
+
+.header a:hover::after {
+  right: 24px;
+}
+
 .footer {
   padding: 120px 80px;
   color: var(--color-white);
