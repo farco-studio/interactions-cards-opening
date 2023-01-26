@@ -40,9 +40,9 @@ body {
   --title-large-lh: 13vh;
   --title-small: 40px;
   --title-small-lh: 56px;
-  --bodycopy: 24px;
+  --bodycopy: 16px;
   --bodycopy-small: 14px;
-  --bodycopy-lh: 32px;
+  --bodycopy-lh: 24px;
   --bodycopy-small-lh: 24px;
   --gradient-top: linear-gradient(180deg, rgba(46, 68, 70, 0) 42.19%, #2E4446 100%);
   --gradient-bottom: linear-gradient(180deg, rgba(1, 28, 26, 0) 42.19%, #011C1A 100%);
@@ -92,9 +92,14 @@ body {
   min-height: 70vh;
 }
 
+.message svg {
+  width: 32px;
+}
+
 .message span {
   display: inline-block;
-  margin-top: 32px;
+  margin-top: 16px;
+  text-transform: uppercase;
 }
 
 @keyframes scrollDown {
@@ -131,7 +136,7 @@ body {
   font-size: var(--bodycopy);
   line-height: var(--bodycopy-lh);
   margin-bottom: 48px;
-  padding: 8px 32px;
+  padding: 8px 24px;
   color: var(--color-black);
   border-radius: 100px;
   background-color: var(--color-orange);
