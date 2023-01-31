@@ -1,8 +1,8 @@
-# Cards Opening Scroll Interaction
+# Shape Animated Mask Slider
 
 Free, refined interactions to inspire our community and make the web a more beautiful place.
 
-[Demo](https://interactions-cards-opening.onrender.com/)
+[Demo](https://interactions-mask-shape.onrender.com/)
 
 
 ## Installation
