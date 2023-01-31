@@ -1,4 +1,4 @@
-# Cards Opening Interaction
+# Cards Opening Scroll Interaction
 
 Free, refined interactions to inspire our community and make the web a more beautiful place.
 
