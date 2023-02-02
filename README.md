@@ -2,11 +2,9 @@
 
 Free, refined interactions to inspire our community and make the web a more beautiful place.
 
+[Demo](https://interactions-cards-opening.onrender.com/)
 
 https://user-images.githubusercontent.com/854320/216284300-b346b154-1b17-44c3-b73a-d8ee2ffc1b56.mp4
-
-
-[Demo](https://interactions-cards-opening.onrender.com/)
 
 
 ## Installation
